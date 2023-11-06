@@ -6,7 +6,7 @@
   "title": "KKS",
   "category": "acf-blocks",
   "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "Displays Mad Mimi Newsletters via iframe",
   "example": {},
   "supports": {
     "html": false
