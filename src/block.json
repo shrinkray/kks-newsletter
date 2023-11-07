@@ -9,11 +9,19 @@
 	"description": "Displays Mad Mimi Newsletters via iframe",
 	"example": {},
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true
+		},
+		"mode": false
 	},
 	"textdomain": "kks-newsletter",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+	"keywords": ["newsletter", "mad mimi"],
+	"script": "file:./newsletter.js",
+	"style": "file:./newsletter.css",
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "newsletter.php"
+	}
 }
