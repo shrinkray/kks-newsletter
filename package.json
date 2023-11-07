@@ -4,17 +4,27 @@
 	"description": "Displays Mad Mimi Newsletters via iframe.",
 	"author": "Shrinkray",
 	"license": "GPL-2.0-or-later",
-	"main": "build/index.js",
+	"main": "build/newsletter.js",
+	"browserslist": [
+		"defaults",
+		"> 0.2% and not dead"
+	],
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "wp-scripts build --webpack-src-dir=src --webpack-copy-php",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"build:css": "postcss src/app.css -o build/app.css"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.16.0"
+		"@wordpress/browserslist-config": "^5.28.0",
+		"@wordpress/postcss-plugins-preset": "^4.29.0",
+		"@wordpress/scripts": "^26.16.0",
+		"autoprefixer": "^10.4.16",
+		"browserlist": "^1.0.1",
+		"postcss-cli": "^10.1.0"
 	}
 }
