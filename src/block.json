@@ -17,7 +17,7 @@
 		"mode": false
 	},
 	"textdomain": "kks-newsletter",
-	"keywords": ["newsletter", "mad mimi"],
+	"keywords": [ "newsletter", "mad mimi" ],
 	"script": "file:./newsletter.js",
 	"style": "file:./newsletter.css",
 	"acf": {
