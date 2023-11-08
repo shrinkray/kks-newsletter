@@ -39,31 +39,14 @@ if ( ! empty( $block['align'] ) ) {
     <?php echo '#' . $id; ?> {
         /* Add styles that use ACF values here */
     }
-    .iframe-container {
-        overflow: hidden;
-        padding-top: 100%;
-        position: relative;
-    }
-
-    .iframe-container iframe {
-        border: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
+    
 </style>
 <section <?= $wrapper_attributes; ?>>
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-layout-3 wp-block-columns-is-layout-flex">
-    <div class="wp-block-column wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
-        <figure class="wp-block-media-text__media iframe-container">
-            <iframe name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
-        </figure>
-    </div>
+    
 
-    <div class="wp-block-column wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+    <div class="wp-block-column wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%; ">
 
         
 
@@ -72,9 +55,9 @@ if ( ! empty( $block['align'] ) ) {
             <table>
             <thead>
                 <tr>
-                    <th>Type<span>&uarr;</span></th>
-                    <th>Year<span>&uarr;</span></th>
-                    <th>Name<span>&uarr;</span></th>
+                    <th padding="1rem;">Type <span>&uarr;</span></th>
+                    <th padding="1rem;">Year <span>&uarr;</span></th>
+                    <th padding="1rem;">Name <span>&uarr;</span></th>
                 </tr>
             </thead>
 
@@ -83,15 +66,17 @@ if ( ! empty( $block['align'] ) ) {
 
                 if (have_rows('stem_newsletter_list')) :
                     while (have_rows('stem_newsletter_list')) : the_row();
-                        $source = get_field( 'news_source' );
-                        $stem_year = (int)get_sub_field('year');
-                        $news_name = get_sub_field('newsletter_name');
-                        $news_url = get_sub_field('newsletter_url');
+                        $news_source    = get_sub_field( 'news_source' );
+                        $stem_year      = (int)get_sub_field('year');
+                        $news_name      = get_sub_field('newsletter_name');
+                        $news_url       = get_sub_field('newsletter_url');
+
+                        ($news_source === 'stemtech') ? $source = 'STEM Tech' : $source = 'Coding';
                 ?>
                         <tr>
-                            <td><?php echo esc_attr( $source ); ?></td>
-                            <td><?php echo esc_attr( $stem_year ); ?></td>
-                            <td>
+                            <td class="type"><?php echo  $source; ?></td>
+                            <td class="year"><?php echo esc_attr( $stem_year ); ?></td>
+                            <td class="url">
                                 <a href="<?php echo esc_url( $news_url ); ?>" 
                                 target="news-frame">
                                 <?php echo esc_textarea( $news_name ); ?>
@@ -105,10 +90,16 @@ if ( ! empty( $block['align'] ) ) {
                         // No rows found
                     endif; ?>
                 </tbody>
+                <caption>Kool Kat Science Newsletter listings</caption>
             </table>
                 
         </div>
 
+    </div>
+    <div class="wp-block-column wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="display:flex; flex-basis:66.66%; ">
+        <figure class="iframe-container">
+            <iframe name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
+        </figure>
     </div>
 </section>
 
