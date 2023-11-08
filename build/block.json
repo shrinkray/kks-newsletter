@@ -1,27 +1,30 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "kks/kks-newsletter",
-	"version": "0.1.0",
-	"title": "KKS Newsletter",
-	"category": "acf-blocks",
-	"icon": "<svg width='24' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#a)'><path fill-rule='evenodd' clip-rule='evenodd' d='M15.94 6.87c.943-2.09 2.23-4.102 3.862-6.039.823-1.073 1.403-1.142 1.69 0 .495 2.04.138 4.82-.515 7.854 2.586 1.57 3.453 3.877 2.293 7.052-.964.86-2.122 1.566-3.468 2.121-1.242 2.239-2.81 2.701-4.587 2.035-1.133.971-2.44 1.561-3.955 1.691-3.059.18-4.738-1.899-5.275-5.847a48.469 48.469 0 0 1-3.444-3.296 39.366 39.366 0 0 1-1.887-2.15c-.81-1.313-.671-2.042 1.347-1.606 2.313.33 4.511 1.064 6.671 1.93C9.966 8.111 12.43 6.93 15.94 6.87Z' fill='#E9B832'/></g><defs><clipPath id='a'><path fill='#fff' d='M0 0h24v21.575H0z'/></clipPath></defs></svg>",
-	"description": "Displays Mad Mimi Newsletters via iframe",
-	"example": {},
-	"supports": {
-		"html": false,
-		"color": {
-			"text": true,
-			"background": true
-		},
-		"mode": false
-	},
-	"textdomain": "kks-newsletter",
-	"keywords": ["newsletter", "mad mimi"],
-	"script": "file:./newsletter.js",
-	"style": "file:./newsletter.css",
-	"acf": {
-		"mode": "auto",
-		"renderTemplate": "newsletter.php"
-	}
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kks/kks-newsletter",
+  "version": "0.1.0",
+  "title": "KKS",
+  "category": "acf-blocks",
+  "icon": "smiley",
+  "description": "Displays Mad Mimi Newsletters via iframe",
+  "example": {},
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true
+    },
+    "mode": false
+  },
+  "textdomain": "kks-newsletter",
+  "keywords": [
+    "newsletter",
+    "mad mimi"
+  ],
+  "script": "file:./newsletter.js",
+  "style": "file:./newsletter.css",
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "newsletter.php"
+  }
 }
