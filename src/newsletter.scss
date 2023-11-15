@@ -30,8 +30,8 @@
 
 	.iframe-container {
 		overflow: hidden;
-		padding-top: 62.5%;
-		position: relative;
+		position: inherit;
+		width: 100%;
 	}
 
 	.iframe-container iframe {
@@ -41,6 +41,8 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
+		// padding-top: 62.5%;
+		aspect-ratio: 16/9;
 	}
 
 	th {

@@ -11,13 +11,13 @@
  */
 
 
-     $wrapper_attributes = get_block_wrapper_attributes(
-        [
-            'class' => 'newsletter'
-        ]
-    );
+    // Create id attribute allowing for custom "anchor" value.
 
-       
+    $id = 'newsletter-' . $block['id'];
+    if ( ! empty($block['anchor'] ) ) {
+        $id = $block['anchor'];
+    }
+
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'kks/kks-newsletter-' . $block['id'];
@@ -41,6 +41,15 @@ if ( ! empty( $block['align'] ) ) {
     }
     
 </style>
+
+<?php
+     $wrapper_attributes = get_block_wrapper_attributes(
+        [
+            'class' => 'newsletter'
+        ]
+    );
+?>
+       
 <section <?= $wrapper_attributes; ?>>
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-layout-3 wp-block-columns-is-layout-flex">
