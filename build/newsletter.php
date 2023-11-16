@@ -54,7 +54,7 @@ if ( ! empty( $block['align'] ) ) {
 
 
 
-    <div class="kks-news-list-column " >
+    <div class="kks-news-list-column" >
 
         <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 
@@ -87,7 +87,7 @@ if ( ! empty( $block['align'] ) ) {
         </div>
 
     </div>
-    <div class=".kks-news-issue-column " >
+    <div class="kks-news-issue-column" >
         <figure class="iframe-container">
             <iframe name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
         </figure>

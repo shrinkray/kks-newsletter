@@ -1,6 +1,6 @@
 {
 	"name": "kks-newsletter",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Displays Mad Mimi Newsletters via iframe.",
 	"author": "Shrinkray",
 	"license": "GPL-2.0-or-later",
