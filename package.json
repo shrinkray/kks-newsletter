@@ -17,7 +17,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start",
-		"build:css": "postcss src/app.css -o build/app.css"
+		"build:css": "postcss src/newsletter.scss -o build/newsletter.css"
 	},
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^5.28.0",
