@@ -89,7 +89,7 @@ if ( ! empty( $block['align'] ) ) {
     </div>
     <div class="kks-news-issue-column" >
         <figure class="iframe-container">
-            <iframe name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
+            <iframe class="iframe" name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
         </figure>
     
 </section>
