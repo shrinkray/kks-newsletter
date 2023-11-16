@@ -50,11 +50,11 @@ if ( ! empty( $block['align'] ) ) {
     );
 ?>
        
-<section <?= $wrapper_attributes; ?>>
+<section <?= $wrapper_attributes; ?>> <!-- class="newsletter wp-block-kks-kks-newsletter" -->
 
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-layout-3 wp-block-columns-is-layout-flex">
 
-    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+
+    <div class="kks-news-list-column " >
 
         <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 
@@ -71,7 +71,7 @@ if ( ! empty( $block['align'] ) ) {
                 ?>
                     
                         <li class="news-links">
-                            <?php echo $news_source . ": " ?>
+                            <span class=""><?php echo $news_source . ": " ?></span>
                         <a href="<?= esc_url( $news_url ); ?>" target="news-frame" class="" >
                                 <?= esc_textarea( $news_name ); ?></a>
                         </li>
@@ -87,11 +87,11 @@ if ( ! empty( $block['align'] ) ) {
         </div>
 
     </div>
-    <div class="wp-block-column .kks-news-issue-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+    <div class=".kks-news-issue-column " >
         <figure class="iframe-container">
             <iframe name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
         </figure>
-    </div>
+    
 </section>
 
 <!-- https://github.com/VFDouglas/HTML-Order-Table-By-Column -->
