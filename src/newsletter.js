@@ -1,1 +1,1 @@
-import "./newsletter.scss";
+import './newsletter.scss';
