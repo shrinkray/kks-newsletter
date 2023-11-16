@@ -41,7 +41,7 @@
 		.iframe-container {
 			position: inherit;
 
-			iframe {
+			.iframe {
 				border: 1px solid var(--wp--preset--color--primary);
 				width: 53vw;
 				max-width: 53rem;
@@ -82,7 +82,7 @@
 		.iframe-container {
 			aspect-ratio: 9/16;
 
-			iframe {
+			.iframe {
 				width: 90vw !important;
 				max-width: auto;
 				height: 100%;
