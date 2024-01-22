@@ -51,17 +51,23 @@ if ( ! empty( $block['align'] ) ) {
 ?>
        
 <section <?= $wrapper_attributes; ?>> <!-- class="newsletter wp-block-kks-kks-newsletter" -->
-
-
-
     <div class="kks-news-list-column" >
 
         <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
 
-           
             <ul>
         
                 <?php 
+                /** 
+                 * ST   : STEM Tech
+                 * C    : Coding
+                 * E    : Engineering
+                 * R    : Robotics
+                 * SC   : STEM Club
+                 * CC   : Code Club
+                 * RC   : Robotics Club
+                 * KKS  : Kool Kat Science
+                 */
 
                 if (have_rows('stem_newsletter_list')) :
                     while (have_rows('stem_newsletter_list')) : the_row();
@@ -71,7 +77,7 @@ if ( ! empty( $block['align'] ) ) {
                 ?>
                     
                         <li class="news-links">
-                            <span class=""><?php echo $news_source . ": " ?></span>
+                            <span class="badge"><?php echo $news_source ?></span>
                         <a href="<?= esc_url( $news_url ); ?>" target="news-frame" class="" >
                                 <?= esc_textarea( $news_name ); ?></a>
                         </li>
@@ -87,11 +93,12 @@ if ( ! empty( $block['align'] ) ) {
         </div>
 
     </div>
+
     <div class="kks-news-issue-column" >
         <figure class="iframe-container">
             <iframe class="iframe" name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
         </figure>
-    
+    </div>
 </section>
 
 <!-- https://github.com/VFDouglas/HTML-Order-Table-By-Column -->
