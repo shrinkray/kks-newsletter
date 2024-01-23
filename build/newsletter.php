@@ -58,27 +58,18 @@ if ( ! empty( $block['align'] ) ) {
             <ul>
         
                 <?php 
-                /** 
-                 * ST   : STEM Tech
-                 * C    : Coding
-                 * E    : Engineering
-                 * R    : Robotics
-                 * SC   : STEM Club
-                 * CC   : Code Club
-                 * RC   : Robotics Club
-                 * KKS  : Kool Kat Science
-                 */
 
                 if (have_rows('stem_newsletter_list')) :
                     while (have_rows('stem_newsletter_list')) : the_row();
                         $news_source    = get_sub_field( 'news_source' );
                         $news_name      = get_sub_field('newsletter_name');
                         $news_url       = get_sub_field('newsletter_url');
+
                 ?>
                     
                         <li class="news-links">
                             <span class="badge"><?php echo $news_source ?></span>
-                        <a href="<?= esc_url( $news_url ); ?>" target="news-frame" class="" >
+                        <a href="<?= esc_url( $news_url ); ?>" target="news-frame" class="link-item" >
                                 <?= esc_textarea( $news_name ); ?></a>
                         </li>
 
