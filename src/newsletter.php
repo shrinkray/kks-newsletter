@@ -48,7 +48,10 @@ if ( ! empty( $block['align'] ) ) {
             'class' => 'newsletter'
         ]
     );
+
+  
 ?>
+
        
 <section <?= $wrapper_attributes; ?>> <!-- class="newsletter wp-block-kks-kks-newsletter" -->
     <div class="kks-news-list-column" >
