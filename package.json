@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"@wordpress/browserslist-config": "^5.28.0",
 		"@wordpress/postcss-plugins-preset": "^4.29.0",
-		"@wordpress/scripts": "^26.16.0",
+		"@wordpress/scripts": "^26.19.0",
 		"autoprefixer": "^10.4.16",
 		"browserlist": "^1.0.1",
 		"postcss-cli": "^10.1.0"
