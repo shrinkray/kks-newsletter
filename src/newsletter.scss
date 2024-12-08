@@ -1,8 +1,50 @@
 /**
  * The following styles get applied both on the front of your site
- * and in the editor.
+ * and in the editor. 
+ * 
+ * @package kks-newsletter
+ * @since 0.1.3
  */
 
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+ .skip-link {
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: var(--wp--preset--color--primary);;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+
+	&:focus {
+		clip: auto !important;
+		clip-path: none;
+		height: auto;
+		width: auto;
+		position: absolute;
+	}
+}
 
 .newsletter {
 	display: flex;
@@ -20,7 +62,6 @@
 			list-style: none;
 			padding: 0;
 			margin: 0;
-
 
 			.news-links {
 				display: flex;
@@ -46,6 +87,19 @@
 					padding: 0 1rem;
 					text-overflow: ellipsis;
 					text-transform: math-auto;
+				}
+				.link-item {
+					&:focus {
+						outline: 2px solid var(--wp--preset--color--primary);
+						outline-offset: 2px;
+						// Ensure focus state is visible
+						box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--wp--preset--color--primary);
+					}
+
+					&:focus:not(:focus-visible) {
+						outline: none;
+						box-shadow: none;
+					}
 				}
 
 			}
