@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:       KKS Newsletter
- * Description:       Displays Newsletters via iframe
+ * Description:       Displays MailerLite Newsletters via iframe
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.1
+ * Version:           0.1.3
  * Author:            Shrinkray
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -37,7 +37,7 @@ function kks_newsletter_block_register(): void
             'description'      => __('Displays MailerLite newsletters via iframe'),
             'render_template'  => plugin_dir_path(__FILE__) . 'build/newsletter.php',
             'category'         => 'acf-blocks',
-            'icon'             => 'pm',
+            'icon'             => 'email',
             'mode'             => 'preview',
             'supports'         => [
                 'mode' => false,

@@ -5,7 +5,7 @@
 	"version": "0.1.2",
 	"title": "KKS Newsletter",
 	"category": "acf-blocks",
-	"icon": "pm",
+	"icon": "email",
 	"description": "Displays MailerLite newsletters via iframe",
 	"supports": {
 		"html": false,
