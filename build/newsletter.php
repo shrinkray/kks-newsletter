@@ -2,7 +2,7 @@
 /**
  * Block template file: newsletter.php
  *
- * Kks/kks Newsletter Block Template.
+ * Kks/kks Newsletter Block Template with MailerLite.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -52,45 +52,52 @@ if ( ! empty( $block['align'] ) ) {
   
 ?>
 
-       
-<section <?= $wrapper_attributes; ?>> <!-- class="newsletter wp-block-kks-kks-newsletter" -->
-    <div class="kks-news-list-column" >
-
-        <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
-
-            <ul>
-        
+<a href="#news-frame" class="skip-link screen-reader-text">
+    Skip to newsletter content
+</a>   
+<section <?= $wrapper_attributes; ?> aria-label="Newsletter Display"> 
+    <div class="kks-news-list-column" role="navigation" aria-label="Newsletter List">
+        <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
+            <ul role="list">
                 <?php 
-
                 if (have_rows('stem_newsletter_list')) :
                     while (have_rows('stem_newsletter_list')) : the_row();
-                        $news_source    = get_sub_field( 'news_source' );
-                        $news_name      = get_sub_field('newsletter_name');
-                        $news_url       = get_sub_field('newsletter_url');
-
+                        $news_source = get_sub_field('news_source');
+                        $news_name = get_sub_field('newsletter_name');
+                        $news_url = get_sub_field('newsletter_url');
                 ?>
-                    
                         <li class="news-links">
-                            <span class="badge"><?php echo $news_source ?></span>
-                        <a href="<?= esc_url( $news_url ); ?>" target="news-frame" class="link-item" >
-                                <?= esc_textarea( $news_name ); ?></a>
+                            <span class="badge" role="text" aria-label="Category: <?php echo esc_attr($news_source); ?>">
+                                <?php echo esc_html($news_source); ?>
+                            </span>
+                            <a href="<?= esc_url($news_url); ?>" 
+                               target="news-frame"
+                               class="link-item"
+                               aria-label="Open <?php echo esc_attr($news_name); ?> newsletter">
+                                <?= esc_html($news_name); ?>
+                            </a>
                         </li>
-
-
-                    <?php
-                        endwhile;
-                    else :
-                        // No rows found
-                    endif; ?>
-                </ul>
-                
+                <?php
+                    endwhile;
+                else :
+                    echo '<li role="alert">No newsletters available</li>';
+                endif; 
+                ?>
+            </ul>
         </div>
-
     </div>
 
-    <div class="kks-news-issue-column" >
+    <div class="kks-news-issue-column">
         <figure class="iframe-container">
-            <iframe class="iframe" name="news-frame" loading="lazy" src="" frameborder="0" scrolling="yes"></iframe>
+            <iframe class="iframe" 
+                    name="news-frame" 
+                    loading="lazy" 
+                    src="" 
+                    frameborder="0" 
+                    scrolling="yes"
+                    title="Newsletter Content"
+                    aria-label="Selected newsletter content will display here">
+            </iframe>
         </figure>
     </div>
 </section>
