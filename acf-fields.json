@@ -1,162 +1,162 @@
 [
-	{
-		"key": "group_654967c368a12",
-		"title": "KKS Newsletter",
-		"fields": [
-			{
-				"key": "field_654967c326d97",
-				"label": "STEM Newsletter List",
-				"name": "stem_newsletter_list",
-				"aria-label": "",
-				"type": "repeater",
-				"instructions": "Click Add Newsletter to see row then fill in the blanks!",
-				"required": 0,
-				"conditional_logic": 0,
-				"wrapper": {
-					"width": "100",
-					"class": "",
-					"id": ""
-				},
-				"layout": "table",
-				"pagination": 0,
-				"min": 0,
-				"max": 0,
-				"collapsed": "field_654ab71105441",
-				"button_label": "Add Newsletter",
-				"rows_per_page": 20,
-				"sub_fields": [
-					{
-						"key": "field_67538f5f3e6f7",
-						"label": "Add a newsletter",
-						"name": "",
-						"aria-label": "",
-						"type": "accordion",
-						"instructions": "",
-						"required": 0,
-						"conditional_logic": 0,
-						"wrapper": {
-							"width": "100",
-							"class": "",
-							"id": ""
-						},
-						"open": 0,
-						"multi_expand": 0,
-						"endpoint": 0,
-						"parent_repeater": "field_654967c326d97"
-					},
-					{
-						"key": "field_654ab71105441",
-						"label": "Source",
-						"name": "news_source",
-						"aria-label": "",
-						"type": "radio",
-						"instructions": "",
-						"required": 0,
-						"conditional_logic": 0,
-						"wrapper": {
-							"width": "100",
-							"class": "",
-							"id": ""
-						},
-						"choices": {
-							"1": "STEM Tech",
-							"2": "Coding",
-							"3": "Engineering",
-							"4": "Robotics",
-							"5": "STEM Club",
-							"6": "Code Club",
-							"7": "Robotics Club",
-							"8": "Kool Kat Science"
-						},
-						"default_value": "STEM Tech",
-						"return_format": "label",
-						"allow_null": 0,
-						"other_choice": 0,
-						"allow_in_bindings": 1,
-						"layout": "vertical",
-						"save_other_choice": 0,
-						"parent_repeater": "field_654967c326d97"
-					},
-					{
-						"key": "field_65496975c557d",
-						"label": "Name",
-						"name": "newsletter_name",
-						"aria-label": "",
-						"type": "text",
-						"instructions": "",
-						"required": 0,
-						"conditional_logic": 0,
-						"wrapper": {
-							"width": "100",
-							"class": "",
-							"id": ""
-						},
-						"default_value": "",
-						"maxlength": "",
-						"allow_in_bindings": 1,
-						"placeholder": "",
-						"prepend": "",
-						"append": "",
-						"parent_repeater": "field_654967c326d97"
-					},
-					{
-						"key": "field_654968dfc557c",
-						"label": "URL",
-						"name": "newsletter_url",
-						"aria-label": "",
-						"type": "url",
-						"instructions": "",
-						"required": 0,
-						"conditional_logic": 0,
-						"wrapper": {
-							"width": "100",
-							"class": "",
-							"id": ""
-						},
-						"default_value": "",
-						"allow_in_bindings": 1,
-						"placeholder": "",
-						"parent_repeater": "field_654967c326d97"
-					},
-					{
-						"key": "field_67538f9b3e6f8",
-						"label": "",
-						"name": "",
-						"aria-label": "",
-						"type": "accordion",
-						"instructions": "",
-						"required": 0,
-						"conditional_logic": 0,
-						"wrapper": {
-							"width": "",
-							"class": "",
-							"id": ""
-						},
-						"open": 0,
-						"multi_expand": 0,
-						"endpoint": 1,
-						"parent_repeater": "field_654967c326d97"
-					}
-				]
-			}
-		],
-		"location": [
-			[
-				{
-					"param": "block",
-					"operator": "==",
-					"value": "all"
-				}
-			]
-		],
-		"menu_order": 0,
-		"position": "side",
-		"style": "default",
-		"label_placement": "top",
-		"instruction_placement": "field",
-		"hide_on_screen": "",
-		"active": true,
-		"description": "Newsletter list",
-		"show_in_rest": 1
-	}
+    {
+        "key": "group_67561acf3744b",
+        "title": "KKS News Viewer",
+        "fields": [
+            {
+                "key": "field_67561acf4ab10",
+                "label": "STEM News List",
+                "name": "stem_news_list",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Click Add Newsletter to see row then fill in the blanks!",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "field_654ab71105441",
+                "button_label": "Add Newsletter",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67561acf4daa3",
+                        "label": "Add a newsletter",
+                        "name": "",
+                        "aria-label": "",
+                        "type": "accordion",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "open": 0,
+                        "multi_expand": 0,
+                        "endpoint": 0,
+                        "parent_repeater": "field_67561acf4ab10"
+                    },
+                    {
+                        "key": "field_67561acf4daab",
+                        "label": "Source",
+                        "name": "news_source",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "1": "STEM Tech",
+                            "2": "Coding",
+                            "3": "Engineering",
+                            "4": "Robotics",
+                            "5": "STEM Club",
+                            "6": "Code Club",
+                            "7": "Robotics Club",
+                            "8": "Kool Kat Science"
+                        },
+                        "default_value": "STEM Tech",
+                        "return_format": "label",
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "allow_in_bindings": 1,
+                        "layout": "vertical",
+                        "save_other_choice": 0,
+                        "parent_repeater": "field_67561acf4ab10"
+                    },
+                    {
+                        "key": "field_67561acf4daaf",
+                        "label": "Name",
+                        "name": "newsletter_name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 1,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67561acf4ab10"
+                    },
+                    {
+                        "key": "field_67561acf4dab3",
+                        "label": "URL",
+                        "name": "newsletter_url",
+                        "aria-label": "",
+                        "type": "url",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "allow_in_bindings": 1,
+                        "placeholder": "",
+                        "parent_repeater": "field_67561acf4ab10"
+                    },
+                    {
+                        "key": "field_67561acf4dab7",
+                        "label": "",
+                        "name": "",
+                        "aria-label": "",
+                        "type": "accordion",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "open": 0,
+                        "multi_expand": 0,
+                        "endpoint": 1,
+                        "parent_repeater": "field_67561acf4ab10"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/kks-newsletter"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "field",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Newsletter list",
+        "show_in_rest": 1
+    }
 ]

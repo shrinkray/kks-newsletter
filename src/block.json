@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "acf/kks-newsletter",
 	"version": "0.1.2",
-	"title": "KKS Newsletter",
+	"title": "KKS News Viewer",
 	"category": "acf-blocks",
 	"icon": "email",
 	"description": "Displays MailerLite newsletters via iframe",

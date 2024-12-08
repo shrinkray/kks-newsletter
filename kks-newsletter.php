@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       KKS Newsletter
+ * Plugin Name:       KKS News Viewer
  * Description:       Displays MailerLite Newsletters via iframe
  * Requires at least: 6.1
  * Requires PHP:      7.0
@@ -33,7 +33,7 @@ function kks_newsletter_block_register(): void
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type([
             'name'              => 'kks-newsletter',
-            'title'            => __('KKS Newsletter'),
+            'title'            => __('KKS News Viewer'),
             'description'      => __('Displays MailerLite newsletters via iframe'),
             'render_template'  => plugin_dir_path(__FILE__) . 'build/newsletter.php',
             'category'         => 'acf-blocks',

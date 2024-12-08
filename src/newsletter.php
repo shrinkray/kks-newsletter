@@ -2,7 +2,7 @@
 /**
  * Block template file: newsletter.php
  *
- * Kks/kks Newsletter Block Template with MailerLite.
+ * Kks/kks News Viewer Block Template with MailerLite.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
