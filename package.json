@@ -25,5 +25,8 @@
 		"autoprefixer": "^10.4.16",
 		"postcss-cli": "^10.1.0",
 		"sass": "^1.82.0"
-	}
+	},
+  "resolutions": {
+    "intl-messageformat-parser": "npm:@formatjs/icu-messageformat-parser@latest"
+  }
 }
