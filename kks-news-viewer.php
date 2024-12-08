@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name:       KKS News Viewer
- * Description:       Displays MailerLite Newsletters via iframe
+ * Description:       Displays MailerLite newsletters via iframe
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.3
+ * Version:           0.1.4
  * Author:            Shrinkray
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       kks-newsletter
+ * Text Domain:       kks-news-viewer
  *
  * @package           kks
  * @return void
@@ -26,16 +26,16 @@ function kks_newsletter_block_register(): void
     register_block_type(
         __DIR__ . '/build/block.json',
         [
-            'render_template' => plugin_dir_path(__FILE__) . 'build/newsletter.php'
+            'render_template' => plugin_dir_path(__FILE__) . 'build/news-viewer.php'
         ]
     );
 
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type([
-            'name'              => 'kks-newsletter',
+            'name'              => 'kks-news-viewer',
             'title'            => __('KKS News Viewer'),
             'description'      => __('Displays MailerLite newsletters via iframe'),
-            'render_template'  => plugin_dir_path(__FILE__) . 'build/newsletter.php',
+            'render_template'  => plugin_dir_path(__FILE__) . 'build/news-viewer.php',
             'category'         => 'acf-blocks',
             'icon'             => 'email',
             'mode'             => 'preview',
@@ -60,7 +60,7 @@ function kks_newsletter_register_include_fields(): void
             array(
                 'param'    => 'block',
                 'operator' => '==',
-                'value'    => 'kks/kks-newsletter', // block.json name.
+                'value'    => 'kks/kks-news-viewer', // block.json name.
             ),
         ),
     );

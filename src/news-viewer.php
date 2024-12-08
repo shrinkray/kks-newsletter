@@ -1,6 +1,6 @@
 <?php 
 /**
- * Block template file: newsletter.php
+ * Block template file: news-viewer.php
  *
  * Kks/kks News Viewer Block Template with MailerLite.
  *

@@ -1,4 +1,4 @@
-import './newsletter.scss';
+import './news-viewer.scss';
 
 // Keyboard navigation support
 document.querySelectorAll( '.news-links a' ).forEach( ( link ) => {

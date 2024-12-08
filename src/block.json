@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "acf/kks-newsletter",
+	"name": "acf/kks-news-viewer",
 	"version": "0.1.2",
 	"title": "KKS News Viewer",
 	"category": "acf-blocks",
@@ -15,8 +15,8 @@
 	},
 	"acf": {
 		"mode": "preview",
-		"renderTemplate": "newsletter.php"
+		"renderTemplate": "news-viewer.php"
 	},
 	"style": "file:./style-index.css",
-	"textdomain": "kks-newsletter"
+	"textdomain": "kks-news-viewer"
 }
