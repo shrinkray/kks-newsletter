@@ -1,22 +1,22 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 3,
-    "name": "acf/kks-newsletter",
-    "version": "0.1.2",
-    "title": "KKS Newsletter",
-    "category": "acf-blocks",
-    "icon": "pm",
-    "description": "Displays MailerLite newsletters via iframe",
-    "supports": {
-        "html": false,
-        "mode": false,
-        "align": true,
-        "jsx": true
-    },
-    "acf": {
-        "mode": "preview",
-        "renderTemplate": "newsletter.php"
-    },
-    "style": "file:./style-index.css",
-    "textdomain": "kks-newsletter"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "acf/kks-newsletter",
+	"version": "0.1.2",
+	"title": "KKS Newsletter",
+	"category": "acf-blocks",
+	"icon": "pm",
+	"description": "Displays MailerLite newsletters via iframe",
+	"supports": {
+		"html": false,
+		"mode": false,
+		"align": true,
+		"jsx": true
+	},
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "newsletter.php"
+	},
+	"style": "file:./style-index.css",
+	"textdomain": "kks-newsletter"
 }
